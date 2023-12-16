@@ -1,29 +1,18 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
  
  function Dashboard() {
     return (
-        <Container fluid>
+        <Container fluid className="d-flex justify-content-center align-items-center">
             <Row>
-                <Col>
-                <h1 className="text-center mt-4 mb-5">Selamat Datang di Bank Equinox Finance</h1>
-                <p className="text-center mb-5">
-                    Bank Equinox Finance menyediakan layanan keuangan yang inovatif dan terpercaya.
-                    Kami berkomitmen untuk memberikan solusi finansial terbaik untuk Anda dan bisnis Anda.
-                    Dengan fokus pada kualitas dan keamanan, kami siap melayani kebutuhan finansial Anda.
-                </p>
+                <Col xs={12} className="text-center text-white">
+                    <h1 className="mt-4 mb-4" style={{fontSize: '2.5rem'}}>Inovasi <span style={{color: 'palevioletred'}}>Finansial</span> Untuk Masa Depan yang Lebih <span style={{color: 'palevioletred'}}>Cerah</span></h1>
+                    <p className="mb-4">
+                        Sebuah Bank yang menyediakan layanan keuangan yang inovatif dan terpercaya.
+                        Kami berkomitmen untuk memberikan solusi finansial terbaik untuk Anda dan bisnis Anda.
+                    </p>
                 </Col>
-            </Row>
-            <Row className="justify-content-center">
-                <Col xs={12} md={6} lg={4}>
-                <Card className="shadow-sm">
-                    <Card.Body>
-                    {/* Isi Card 1 */}
-                    </Card.Body>
-                </Card>
-                </Col>
-                {/* Tambahkan Card atau informasi lainnya di sini */}
             </Row>
         </Container>
     )
