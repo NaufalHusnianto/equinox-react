@@ -1,22 +1,26 @@
-import { Navbar, Nav, Button, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Button, Container, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <Navbar expand="lg" className="mb-4">
+        <Navbar expand="lg" style={{ background: 'black' }}>
             <Container>
-                <Navbar.Brand as={Link} to="/" className="text-white">Equinox <span style={{color: 'palevioletred'}}>Finance</span></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: 'black', backgroundColor: 'white' }} />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto" style={{ marginLeft: 'auto'}}>
-                        <Nav.Link as={Link} to="/transfer" className="text-white">Transfer</Nav.Link>
-                        <Nav.Link as={Link} to="/pembayaran" className="text-white">Pembayaran</Nav.Link>
-                        <Nav.Link as={Link} to="/saldo" className="text-white">Cek Saldo</Nav.Link>
-                        <Nav.Link as={Link} to="/bantuan" className="text-white">Bantuan</Nav.Link>
-                        <Nav.Link as={Link} to="/about-us" className="text-white">About Us</Nav.Link>
+                <Navbar.Brand as={Link} to="/" style={{ color: 'white' }}>Equinox Finance</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                    <Nav style={{ marginLeft: 'auto', marginRight: '2rem' }}>
+                        <Nav.Link as={Link} to="/home" style={{ color: 'white', marginLeft: '20px' }}>Home</Nav.Link>
+                        <Nav.Link as={Link} to="/about" style={{ color: 'white', marginLeft: '20px' }}>About</Nav.Link>
+                        <NavDropdown title={ <span className="text-white">Dropdown</span> } id="nav-dropdown" style={{ marginLeft: '20px' }}>
+                            <NavDropdown.Item as={Link} to="/service1" style={{ color: 'black' }}>Service 1</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/service2" style={{ color: 'black' }}>Service 2</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Service 3</NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link as={Link} to="/contact" style={{ color: 'white', marginLeft: '20px' }}>Contact</Nav.Link>
                     </Nav>
-                    <Button as={Link} to="/login" style={{backgroundColor: 'palevioletred', border: 'white'}}>Sign In</Button>
+                    <Button as={Link} to="/login" style={{ backgroundColor: 'palevioletred', border: 'black', color: 'white' }}>Login</Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
