@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Container, Spinner } from "react-bootstrap";
+import { useEffect, useState } from "react";
 
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
@@ -46,7 +47,9 @@ function LoginLayout() {
 
   return (
     <Container fluid style={containerStyle} className="d-flex flex-column justify-content-between">
-      <div style={{height: '10vh'}} />
+      <div style={{height: '10vh'}}>
+        <h1 className="text-white text-center mt-4">Equinox <span style={{color: 'palevioletred'}}>Finance</span></h1>
+      </div>
       <Login />
       <Footer />
     </Container>
@@ -55,15 +58,33 @@ function LoginLayout() {
 
 // Routing
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
-        <Route path="/simpanan-perseorangan" element={<MainLayout><SimpananPersonal /></MainLayout>} />
-        <Route path="/login" element={<LoginLayout />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      {loading ? (
+        <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+          <Spinner animation="border" variant="primary" />
+        </div>
+      ) : (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
+            <Route path="/simpanan-perseorangan" element={<MainLayout><SimpananPersonal /></MainLayout>} />
+            <Route path="/login" element={<LoginLayout />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 
