@@ -1,50 +1,34 @@
-import { useState } from "react";
-import { Container, Form, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Login() {
-    const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        email: '',
-        password: ''
-    });
-
-    const [loggedInUser, setLoggedInUser] = useState(null);
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        if (formData.email === 'admin@gmail.com' && formData.password === '1234') {
-            setLoggedInUser({
-                name: 'Admin',
-                email: formData.email
-            });
-            navigate('/');
-        } else {
-            alert('Login gagal. Periksa kembali email dan password Anda.');
-        }
-    };
-
     return (
         <Container fluid className="d-flex justify-content-center align-items-center">
-            <Form onSubmit={handleLogin}>
+            <Form style={{width: '15rem'}}>
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" name="email" value={formData.email} onChange={handleInputChange} />
+                    <Form.Label className="text-white">Email address</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" name="email" />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" name="password" value={formData.password}onChange={handleInputChange} />
+                    <Form.Label className="text-white">Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" name="password" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" className="mt-3">
-                    Login
-                </Button>
+                <Row className="mt-3">
+                    <Col className="text-center">
+                        <Button variant="primary" type="submit" style={{width: '7rem'}}>Login</Button>
+                    </Col>
+                </Row>
+
+                <Row className="mt-2">
+                    <Col xs={6} sm={6} className="text-right">
+                        <Link to="/signup" className="text-white small">Buat akun!</Link>
+                    </Col>
+                    <Col xs={6} sm={6} className="text-left">
+                        <Link to="/help" className="text-white small">Butuh bantuan?</Link>
+                    </Col>
+                </Row>
             </Form>
         </Container>
     );

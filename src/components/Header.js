@@ -6,7 +6,7 @@ import { AiOutlineEnvironment } from 'react-icons/ai';
 
 function Header() {
     const openGoogleMaps = () => {
-        window.open('https://www.google.com/maps', '_blank');
+        window.open('https://maps.app.goo.gl/DaYbD4b5goc9XdJBA', '_blank');
     };
 
     return (

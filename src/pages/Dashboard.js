@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  
  function Dashboard() {
     return (
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center align-items-center user-select-none">
             <Container fluid className="text-white">
                 <Row className="justify-content-center">
                     <Col md={8} className="text-left">
