@@ -1,5 +1,6 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CustomCard from '../components/CustomCard';
  
  function SimpananPersonal() {
     return (
@@ -15,44 +16,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
           </Row>
           <Row className="mb-4 mt-5">
             <Col md={6} className="mb-4">
-              <Card className="bg-dark text-white">
-                <div style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/image/tabungan-rupiah.jpg")', backgroundSize: 'cover', minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                  <Card.Body>
-                    <Card.Title>Tabungan Rupiah</Card.Title>
-                    <Card.Text>Kemudahan Menabung Untuk Kenyamanan Hidup</Card.Text>
-                  </Card.Body>
-                </div>
-              </Card>
+                <CustomCard
+                backgroundImage="/image/tabungan-rupiah.jpg"
+                title="Tabungan Rupiah"
+                description="Kemudahan Menabung Untuk Kenyamanan Hidup"
+                />
             </Col>
             <Col md={6} className="mb-4">
-              <Card className="bg-dark text-white">
-                <div style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/image/tabungan-multicurrency.jpg")', backgroundSize: 'cover', minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                  <Card.Body>
-                    <Card.Title>Tabungan Multicurrency</Card.Title>
-                    <Card.Text>Kemudahan dan benefit transaksi dengan berbagai pilihan valuta asing</Card.Text>
-                  </Card.Body>
-                </div>
-              </Card>
+                <CustomCard
+                backgroundImage="/image/tabungan-multicurrency.jpg"
+                title="Tabungan Multicurrency"
+                description="Kemudahan dan benefit transaksi dengan berbagai pilihan valuta asing"
+                />
             </Col>
             <Col md={6} className="mb-4">
-              <Card className="bg-dark text-white">
-                <div style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/image/tabungan-rencana.jpg")', backgroundSize: 'cover', minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                  <Card.Body>
-                    <Card.Title>Tabungan Rencana</Card.Title>
-                    <Card.Text>Wujudkan rencana hidup di masa depan dengan pengelolaan terencana</Card.Text>
-                  </Card.Body>
-                </div>
-              </Card>
+                <CustomCard
+                backgroundImage="/image/tabungan-rencana.jpg"
+                title="Tabungan Rencana"
+                description="Wujudkan rencana hidup di masa depan dengan pengelolaan terencana"
+                />
             </Col>
             <Col md={6} className="mb-4">
-              <Card className="bg-dark text-white">
-                <div style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/image/tabungan-valas.jpg")', backgroundSize: 'cover', minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                  <Card.Body>
-                    <Card.Title>Tabungan Valas</Card.Title>
-                    <Card.Text>Keuntungan lebih untuk simpanan valuta asing</Card.Text>
-                  </Card.Body>
-                </div>
-              </Card>
+                <CustomCard
+                backgroundImage="/image/tabungan-valas.jpg"
+                title="Tabungan Valas"
+                description="Keuntungan lebih untuk simpanan valuta asing"
+                />
             </Col>
           </Row>
         </Container>
