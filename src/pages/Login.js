@@ -30,7 +30,7 @@ function Login() {
     };
 
     return (
-        <Container fluid className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <Container fluid className="d-flex justify-content-center align-items-center">
             <Form onSubmit={handleLogin}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -42,7 +42,7 @@ function Login() {
                     <Form.Control type="password" placeholder="Password" name="password" value={formData.password}onChange={handleInputChange} />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className="mt-3">
                     Login
                 </Button>
             </Form>
