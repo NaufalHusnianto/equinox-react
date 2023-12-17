@@ -8,27 +8,35 @@ import Login from "./pages/Login";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SimpananPersonal from "./pages/SimpananPersonal";
 
 // Untuk Dashboard
-function DashboardComponent() {
+function MainLayout({ children }) {
+  const location = useLocation();
   const containerStyle = {
-    background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/dashboard-bg.jpg")',
+    background:
+      location.pathname === "/simpanan-perseorangan"
+        ? 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/simpanan-bg.jpg")'
+        : 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/dashboard-bg.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    minHeight: '100vh',
+    minHeight:
+      location.pathname === "/simpanan-perseorangan" 
+      ? 'none' 
+      : '100vh',
   };
 
   return (
     <Container fluid style={containerStyle} className="d-flex flex-column justify-content-between">
       <Header />
-      <Dashboard />
+        {children}
       <Footer />
     </Container>
   );
 }
 
 // Untuk Lojinn
-function LoginComponent() {
+function LoginLayout() {
   const containerStyle = {
     background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/login-bg.jpg")',
     backgroundSize: 'cover',
@@ -50,8 +58,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<DashboardComponent />} />
-        <Route path="/login" element={<LoginComponent />} />
+        <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
+        <Route path="/simpanan-perseorangan" element={<MainLayout><SimpananPersonal /></MainLayout>} />
+        <Route path="/login" element={<LoginLayout />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
