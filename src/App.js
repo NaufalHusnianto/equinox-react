@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
-import { Container, Spinner } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
@@ -58,33 +57,15 @@ function LoginLayout() {
 
 // Routing
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <>
-      {loading ? (
-        <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
-          <Spinner animation="border" variant="primary" />
-        </div>
-      ) : (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
-            <Route path="/simpanan-perseorangan" element={<MainLayout><SimpananPersonal /></MainLayout>} />
-            <Route path="/login" element={<LoginLayout />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </BrowserRouter>
-      )}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
+        <Route path="/simpanan-perseorangan" element={<MainLayout><SimpananPersonal /></MainLayout>} />
+        <Route path="/login" element={<LoginLayout />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
