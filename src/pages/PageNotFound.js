@@ -3,9 +3,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 function PageNotFound() {
     return (
-        <Container className="d-flex justify-content-center align-items-center">
+        <Container className="d-flex justify-content-center align-items-center" style={{height: '100vh'}}>
             <Row>
-                <Col className="text-center text-white">
+                <Col className="text-center">
                     <h1>404 - Halaman Tidak Ditemukan</h1>
                     <p>Maaf, halaman yang Anda cari tidak ditemukan.</p>
                 </Col>

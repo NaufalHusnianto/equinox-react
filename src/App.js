@@ -9,27 +9,31 @@ import Login from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SimpananPersonal from "./pages/SimpananPersonal";
+import PinjamanPersonal from "./pages/PinjamanPersonal";
+import InvestasiAsuransi from "./pages/InvestasiAsuransi";
 
 // Untuk Dashboard
 function MainLayout({ children }) {
   const location = useLocation();
+  let backgroundImage = '/dashboard-bg.jpg'; // Default background
+
+  if (location.pathname === '/simpanan-perseorangan') {
+    backgroundImage = '/simpanan-bg.jpg';
+  } else if (location.pathname === '/pinjaman-perseorangan') {
+    backgroundImage = '/pinjaman-bg.jpg';
+  }
+
   const containerStyle = {
-    background:
-      location.pathname === "/simpanan-perseorangan"
-        ? 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/simpanan-bg.jpg")'
-        : 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/dashboard-bg.jpg")',
+    background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${backgroundImage}")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    minHeight:
-      location.pathname === "/simpanan-perseorangan" 
-      ? 'none' 
-      : '100vh',
+    minHeight: location.pathname === '/simpanan-perseorangan' ? 'none' : '100vh',
   };
 
   return (
     <Container fluid style={containerStyle} className="d-flex flex-column justify-content-between">
       <Header />
-        {children}
+      {children}
       <Footer />
     </Container>
   );
@@ -62,6 +66,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
         <Route path="/simpanan-perseorangan" element={<MainLayout><SimpananPersonal /></MainLayout>} />
+        <Route path="/pinjaman-perseorangan" element={<MainLayout><PinjamanPersonal /></MainLayout>} />
+        <Route path="/investasi-asuransi" element={<MainLayout><InvestasiAsuransi /></MainLayout>} />
         <Route path="/login" element={<LoginLayout />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

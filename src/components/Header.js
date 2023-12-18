@@ -18,8 +18,8 @@ function Header() {
                     <Nav className="ml-auto">
                         <NavDropdown title={ <span className="text-white">Perseorangan</span> } id="nav-dropdown" style={{ marginLeft: '5px', color: 'white' }}>
                             <NavDropdown.Item as={Link} to="/simpanan-perseorangan" style={{ color: 'black' }}>Simpanan</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service2" style={{ color: 'black' }}>Pinjaman</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service2" style={{ color: 'black' }}>Investasi & Asuransi</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/pinjaman-perseorangan" style={{ color: 'black' }}>Pinjaman</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/investasi-asuransi" style={{ color: 'black' }}>Investasi & Asuransi</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Kartu Kredit</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Kartu Debit</NavDropdown.Item>
@@ -38,12 +38,12 @@ function Header() {
                             <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Sustainability</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Investor Relation</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link as={Link} to="/bantuan" className="text-white">Bantuan</Nav.Link>
-                        <Nav.Link onClick={openGoogleMaps} style={{ color: 'white', marginLeft: '20px', marginRight: '20px', cursor: 'pointer' }}>
+                        <Nav.Link as={Link} to="/bantuan" className="text-white" style={{ marginLeft: '5px' }}>Bantuan</Nav.Link>
+                        <Nav.Link onClick={openGoogleMaps} style={{ color: 'white', marginLeft: '1px', marginRight: '10px', cursor: 'pointer' }}>
                                 <AiOutlineEnvironment/> Location
                         </Nav.Link>
                     </Nav>
-                    <Button as={Link} to="/login" style={{ backgroundColor: 'palevioletred', border: 'black', color: 'white', marginLeft: '10px' }}>Sign In</Button>
+                    <Button as={Link} to="/login" style={{ backgroundColor: 'palevioletred', border: 'black', color: 'white', marginLeft: '10px', marginTop: '10px' }}>Sign In</Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
