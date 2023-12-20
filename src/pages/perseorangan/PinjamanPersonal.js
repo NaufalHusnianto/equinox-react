@@ -1,13 +1,17 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CustomCard from '../components/CustomCard';
+import CustomCard from '../../components/CustomCard';
+import { useLocation } from 'react-router-dom';
  
  function PinjamanPersonal() {
+    const location = useLocation();
+
     return (
         <div className="d-flex justify-content-center align-items-center user-select-none">
         <Container fluid className="text-white">
           <Row className="justify-content-center mb-5 mt-5">
+            <p style={{ marginBottom: '3rem', width: '75%', color: 'palevioletred'}} className="fs-5">Home<span className="text-white">{location.pathname}</span></p>
             <Col md={8} className="text-left">
                 <h1 className="mt-4 mb-4" style={{ fontSize: '3rem' }}>Pinjaman</h1>
                 <p className="mb-4">

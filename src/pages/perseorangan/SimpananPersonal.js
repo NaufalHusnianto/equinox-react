@@ -1,17 +1,21 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CustomCard from '../components/CustomCard';
+import CustomCard from '../../components/CustomCard';
  
- function InvestasiAsuransi() {
+ function SimpananPersonal() {
+    const location = useLocation();
+
     return (
         <div className="d-flex justify-content-center align-items-center user-select-none">
         <Container fluid className="text-white">
           <Row className="justify-content-center mb-5 mt-5">
+            <p style={{ marginBottom: '3rem', width: '75%', color: 'palevioletred'}} className="fs-5">Home<span className="text-white">{location.pathname}</span></p>
             <Col md={8} className="text-left">
-                <h1 className="mt-4 mb-4" style={{ fontSize: '3rem' }}>Investasi & Asuransi</h1>
+                <h1 className="mt-4 mb-4" style={{ fontSize: '3rem' }}>Simpanan</h1>
                 <p className="mb-4">
-                Percayakan perlindungan diri anda dan keluarga serta investasi dengan berbagai produk investasi & asuransi kami
+                    Dapatkan keuntungan dan kenyamanan yang lebih baik dengan berbagai solusi simpanan dari Bank Equinox untuk Anda.
                 </p>
             </Col>
           </Row>
@@ -19,29 +23,29 @@ import CustomCard from '../components/CustomCard';
             <Col md={6} className="mb-4">
                 <CustomCard
                 backgroundImage="/image/tabungan-rupiah.jpg"
-                title="Equinox Insurance"
-                description="Equinox group memberikan berbagai solusi untuk perlindungan kerugian aset dan layanan asuransi umum bagi nasabah dan mitra bisnis"
+                title="Tabungan Rupiah"
+                description="Kemudahan Menabung Untuk Kenyamanan Hidup"
                 />
             </Col>
             <Col md={6} className="mb-4">
                 <CustomCard
                 backgroundImage="/image/tabungan-multicurrency.jpg"
-                title="Danamadya"
-                description="Nikmati Berbagai macam investasi Danamadya kami, sesuai kebutuhan anda"
+                title="Tabungan Multicurrency"
+                description="Kemudahan dan benefit transaksi dengan berbagai pilihan valuta asing"
                 />
             </Col>
             <Col md={6} className="mb-4">
                 <CustomCard
                 backgroundImage="/image/tabungan-rencana.jpg"
-                title="ORI&Sukuk Ritel"
-                description="Nikmati berinvestasi dengan obligasi negara"
+                title="Tabungan Rencana"
+                description="Wujudkan rencana hidup di masa depan dengan pengelolaan terencana"
                 />
             </Col>
             <Col md={6} className="mb-4">
                 <CustomCard
                 backgroundImage="/image/tabungan-valas.jpg"
-                title="Asuransi Kesehatan - Equinox Health"
-                description="Nikmati manfaat perlindungan jiwa bagi anda dan keluarga"
+                title="Tabungan Valas"
+                description="Keuntungan lebih untuk simpanan valuta asing"
                 />
             </Col>
           </Row>
@@ -50,4 +54,4 @@ import CustomCard from '../components/CustomCard';
     );
  }
 
- export default InvestasiAsuransi;
+ export default SimpananPersonal;
