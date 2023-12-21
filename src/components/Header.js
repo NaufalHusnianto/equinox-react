@@ -49,7 +49,7 @@ function Header() {
                             <NavDropdown.Item as={Link} to="/perseorangan/investasi-asuransi" style={{ color: 'black' }}>Investasi & Asuransi</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item as={Link} to="/equinox-credit" style={{ color: 'black' }}>Kartu Kredit</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Kartu Debit</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/perseorangan/equinox-debit" style={{ color: 'black' }}>Kartu Debit</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={ <span className="text-white">Bisnis</span> } id="nav-dropdown" style={{ marginLeft: '5px' }}>
                             <NavDropdown.Item as={Link} to="/service1" style={{ color: 'black' }}>Simpanan</NavDropdown.Item>

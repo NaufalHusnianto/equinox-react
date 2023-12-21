@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
@@ -10,6 +10,7 @@ import SimpananPersonal from "./pages/perseorangan/SimpananPersonal";
 import PinjamanPersonal from "./pages/perseorangan/PinjamanPersonal";
 import InvestasiAsuransi from "./pages/perseorangan/InvestasiAsuransi";
 import CreditCard from "./pages/perseorangan/CreditCard";
+import DebitCard from "./pages/perseorangan/DebitCard";
 
 // Routing
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="simpanan" element={<MainLayout><SimpananPersonal /></MainLayout>} />
           <Route path="pinjaman" element={<MainLayout><PinjamanPersonal /></MainLayout>} />
           <Route path="investasi-asuransi" element={<MainLayout><InvestasiAsuransi /></MainLayout>} />
+          <Route path="equinox-debit" element={<MainLayout><DebitCard /></MainLayout>} />
         </Route>
         <Route path="/equinox-credit" element={<MainLayout><CreditCard /></MainLayout>} />
         <Route path="/login" element={<Login />} />

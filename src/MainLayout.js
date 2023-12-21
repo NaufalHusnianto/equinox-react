@@ -13,15 +13,17 @@ function MainLayout({ children }) {
       backgroundImage = '/pinjaman-bg.jpg';
     } else if (location.pathname === '/perseorangan/investasi-asuransi') {
       backgroundImage = '/asuransi-investasi.jpg'
+    } else if (location.pathname === '/perseorangan/equinox-debit') {
+      backgroundImage = ''
     } else if (location.pathname === '/equinox-credit') {
-        backgroundImage = '';
-    }
+      backgroundImage = '';
+    } 
   
     const containerStyle = {
-      background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${backgroundImage}")`,
+      background: backgroundImage ? `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${backgroundImage}")` : 'black',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      minHeight: location.pathname === '/simpanan-perseorangan' ? 'none' : '100vh',
+      minHeight: '100vh',
     };
   
     return (
