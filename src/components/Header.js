@@ -48,14 +48,14 @@ function Header() {
                             <NavDropdown.Item as={Link} to="/perseorangan/pinjaman" style={{ color: 'black' }}>Pinjaman</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/perseorangan/investasi-asuransi" style={{ color: 'black' }}>Investasi & Asuransi</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item as={Link} to="/equinox-credit" style={{ color: 'black' }}>Kartu Kredit</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/perseorangan/equinox-debit" style={{ color: 'black' }}>Kartu Debit</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/produk/equinox-credit" style={{ color: 'black' }}>Kartu Kredit</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/produk/equinox-debit" style={{ color: 'black' }}>Kartu Debit</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={ <span className="text-white">Bisnis</span> } id="nav-dropdown" style={{ marginLeft: '5px' }}>
-                            <NavDropdown.Item as={Link} to="/service1" style={{ color: 'black' }}>Simpanan</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service2" style={{ color: 'black' }}>Pinjaman</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/bisnis/simpanan" style={{ color: 'black' }}>Simpanan</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/bisnis/pinjaman" style={{ color: 'black' }}>Pinjaman</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Corporate Card</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/produk/corporate-card" style={{ color: 'black' }}>Corporate Card</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Cash Management</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Trade</NavDropdown.Item>

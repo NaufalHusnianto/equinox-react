@@ -5,19 +5,15 @@ import Footer from "./components/Footer";
 
 function MainLayout({ children }) {
     const location = useLocation();
-    let backgroundImage = '/dashboard-bg.jpg';
+    let backgroundImage = '/image/main-bg.jpg';
   
-    if (location.pathname === '/perseorangan/simpanan') {
-      backgroundImage = '/simpanan-bg.jpg';
-    } else if (location.pathname === '/perseorangan/pinjaman') {
-      backgroundImage = '/pinjaman-bg.jpg';
-    } else if (location.pathname === '/perseorangan/investasi-asuransi') {
-      backgroundImage = '/asuransi-investasi.jpg'
-    } else if (location.pathname === '/perseorangan/equinox-debit') {
+    if (location.pathname === '/produk/equinox-debit') {
       backgroundImage = ''
-    } else if (location.pathname === '/equinox-credit') {
+    } else if (location.pathname === '/produk/equinox-credit') {
       backgroundImage = '';
-    } 
+    } else if (location.pathname === '/produk/corporate-card') {
+      backgroundImage = '';
+    }
   
     const containerStyle = {
       background: backgroundImage ? `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${backgroundImage}")` : 'black',

@@ -1,13 +1,15 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function DebitCard() {
     const location = useLocation();
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center user-select-none">
-            <Container fluid className="text-white">
-                <Row className="justify-content-center mb-3 mt-2 bg-black p-5">
+            <Container fluid className="text-white" style={{background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/image/secondary-bg.jpg)'}}>
+                <Row className="justify-content-center mb-3 mt-2p-5">
                     <p style={{ marginBottom: '3rem', width: '75%', color: 'palevioletred'}} className="fs-5">Home<span className="text-white">{location.pathname}</span></p>
                     <Col md={8} className="text-left">
                         <h1 className="mt-4 mb-4 text-center" style={{ fontSize: '3rem' }}>Kartu Debit Equinox</h1>

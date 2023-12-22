@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
     const containerStyle = {
-        background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/login-bg.jpg")',
+        background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/image/secondary-bg.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: '100vh'
