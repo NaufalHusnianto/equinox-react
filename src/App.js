@@ -18,6 +18,7 @@ import CashManagement from "./pages/bisnis/CashManagement";
 import TradeFinance from "./pages/bisnis/TradeFinance";
 import InternationalBanking from "./pages/bisnis/InternationalBanking";
 import TentangEquinox from "./pages/TentangEquinox";
+import Bantuan from "./pages/Bantuan";
 
 // Routing
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="corporate-card" element={<MainLayout><CorporateCard /></MainLayout>} />
         </Route>
         <Route path="/tentang-equinox" element={<MainLayout><TentangEquinox /></MainLayout>} />
+        <Route path="/bantuan" element={<MainLayout><Bantuan /></MainLayout>} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

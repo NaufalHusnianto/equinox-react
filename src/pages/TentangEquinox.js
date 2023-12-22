@@ -1,16 +1,12 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; 
 
 
 function TentangEquinox() {
-    const location = useLocation();
-
     return(
         <div className="d-flex flex-column justify-content-center align-items-center user-select-none">
             <Container fluid className="text-white">
-                <Row className="justify-content-center mb-3 mt-2p-5">
-                    <p style={{ marginBottom: '3rem', width: '75%', color: 'palevioletred' }} className="fs-5">Home<span className="text-white">{location.pathname}</span></p>
+                <Row className="justify-content-center mb-3 mt-5">
                     <Col md={8} className="text-left">
                         <h1 className="mt-4 mb-4 text-center" style={{ fontSize: '3rem' }}>Tentang Equinox</h1>
                         <p className="mb-4 text-center">
@@ -57,7 +53,6 @@ function TentangEquinox() {
 
                         <h2 className="mt-5 mb-4">Social Media</h2>
                         <Row className="justify-content-center">
-                            {/* Gunakan komponen dari react-icons */}
                             <Col xs={3} md={2} className="text-center">
                                 <FaFacebook size={30} color="white" />
                             </Col>
@@ -67,7 +62,6 @@ function TentangEquinox() {
                             <Col xs={3} md={2} className="text-center">
                                 <FaInstagram size={30} color="white" />
                             </Col>
-                            {/* Tambahkan icon lainnya sesuai kebutuhan */}
                         </Row>
                     </Col>
                 </Row>
