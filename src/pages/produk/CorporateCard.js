@@ -135,7 +135,7 @@ function CorporateCard() {
         <div className="d-flex flex-column justify-content-center align-items-center user-select-none">
             <Container className="w-100 d-flex align-items-center" style={{ background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/image/secondary-bg.jpg)'}}>
                 <Row className="align-items-center">
-                    <Col md={5} className="ms-5 mt-5 mb-5">
+                    <Col md={5} className="mt-5 mb-5">
                         <Image
                             className="d-block w-100"
                             src="/image/equinox debit card/debit-black.png"
