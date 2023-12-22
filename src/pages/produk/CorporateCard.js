@@ -133,17 +133,17 @@ function CorporateCard() {
 
     return(
         <div className="d-flex flex-column justify-content-center align-items-center user-select-none">
-            <Container className="w-100 d-flex align-items-center" style={{background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/image/secondary-bg.jpg)'}}>
-                <Row>
-                    <Col className="w-50 ms-5 mt-5 mb-5">
+            <Container className="w-100 d-flex align-items-center" style={{ background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/image/secondary-bg.jpg)'}}>
+                <Row className="align-items-center">
+                    <Col md={5} className="ms-5 mt-5 mb-5">
                         <Image
                             className="d-block w-100"
                             src="/image/equinox debit card/debit-black.png"
                             alt="ORI"
-                            />
+                        />
                     </Col>
-                    <Col className="w-50 ms-3 me-5 mt-5 mb-5">
-                        <h1 style={{color: 'palevioletred'}}>Equinox Corporate Card</h1>
+                    <Col md={5} className="ms-3 me-5 mt-5 mb-5">
+                        <h1 style={{ color: 'palevioletred' }}>Equinox Corporate Card</h1>
                         <p className="text-white">
                             Equinox Corporate Card merupakan kartu kredit yang diterbitkan untuk memenuhi kebutuhan transaksi dan perjalanan bisnis perusahaan dengan menyediakan kemudahan bagi perusahaan untuk mengontrol setiap transaksi yang dilakukan oleh pegawai.
                         </p>
@@ -174,15 +174,15 @@ function CorporateCard() {
                     <h1 className="text-center fs-4 mt-3">Equinox Credit Card</h1>
                 </Row>
                 <Row className="mt-5">
-                    <Col className="text-center">
+                    <Col className="text-center" xs={12} md={4}>
                         <Image src="/image/equinox debit card/debit-gold.png" style={{width: '300px'}} />
                         <h1 className="fs-5">Gold</h1>
                     </Col>
-                    <Col className="text-center">
+                    <Col className="text-center" xs={12} md={4}>
                         <Image src="/image/equinox debit card/debit-red.png" style={{width: '300px'}} />
                         <h1 className="fs-5">Platinum</h1>
                     </Col>
-                    <Col className="text-center">
+                    <Col className="text-center" xs={12} md={4}>
                         <Image src="/image/equinox debit card/debit-silver.png" style={{width: '300px'}} />
                         <h1 className="fs-5">Silver</h1>
                     </Col>
