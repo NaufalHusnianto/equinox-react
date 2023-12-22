@@ -134,19 +134,21 @@ function CorporateCard() {
     return(
         <div className="d-flex flex-column justify-content-center align-items-center user-select-none">
             <Container className="w-100 d-flex align-items-center" style={{background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/image/secondary-bg.jpg)'}}>
-                    <div className="w-50 ms-5 me-5 mt-5 mb-5">
+                <Row>
+                    <Col className="w-50 ms-5 mt-5 mb-5">
                         <Image
                             className="d-block w-100"
                             src="/image/equinox debit card/debit-black.png"
                             alt="ORI"
-                        />
-                    </div>
-                    <div className="w-50 ms-5 me-5 mt-5 mb-5">
+                            />
+                    </Col>
+                    <Col className="w-50 ms-3 me-5 mt-5 mb-5">
                         <h1 style={{color: 'palevioletred'}}>Equinox Corporate Card</h1>
                         <p className="text-white">
                             Equinox Corporate Card merupakan kartu kredit yang diterbitkan untuk memenuhi kebutuhan transaksi dan perjalanan bisnis perusahaan dengan menyediakan kemudahan bagi perusahaan untuk mengontrol setiap transaksi yang dilakukan oleh pegawai.
                         </p>
-                    </div>
+                    </Col>
+                </Row>
             </Container>
 
             <Container fluid className="text-white mt-5 mb-5 bg-dark">
