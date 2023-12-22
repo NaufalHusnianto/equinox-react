@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import CustomCard from "../../components/CustomCard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function PinjamanBisnis() {
+function CashManagement() {
         const location = useLocation();
 
         return (
@@ -13,9 +13,9 @@ function PinjamanBisnis() {
               <Row className="justify-content-center mb-5 mt-5">
                 <p style={{ marginBottom: '3rem', width: '75%', color: 'palevioletred'}} className="fs-5">Home<span className="text-white">{location.pathname}</span></p>
                 <Col md={8} className="text-left">
-                    <h1 className="mt-4 mb-4" style={{ fontSize: '3rem' }}>Pinjaman</h1>
+                    <h1 className="mt-4 mb-4" style={{ fontSize: '3rem' }}>Cash Management</h1>
                     <p className="mb-4">
-                    Solusi pinjaman dengan berbagai pilihan yang dapat disesuaikan dengan kebutuhan Anda
+                    Kelola keuangan bisnis Anda dengan berbagai fasilitas dari kami, agar bisnis Anda semakin baik
                     </p>
                 </Col>
               </Row>
@@ -23,21 +23,21 @@ function PinjamanBisnis() {
                 <Col md={6} className="mb-4">
                     <CustomCard
                     backgroundImage="/image/kredit-multiguna.jpg"
-                    title="Micro"
+                    title="Equinox Cash Management"
                     description="Kredit untuk membiayai berbagai kebutuhan anda"
                     />
                 </Col>
                 <Col md={6} className="mb-4">
                     <CustomCard
                     backgroundImage="/image/kredit-serbaguna.jpg"
-                    title="Usaha Kecil"
+                    title="Equinox Bill Collection"
                     description="Wujudkan kendaraan idaman anda dengan mudah"
                     />
                 </Col>
                 <Col md={6} className="mb-4">
                     <CustomCard
                     backgroundImage="/image/tabungan-rencana.jpg"
-                    title="Corporate"
+                    title="Equinox Auto Debit"
                     description="Wujudkan hunian idaman sesuai keinginan anda"
                     />
                 </Col>
@@ -47,4 +47,4 @@ function PinjamanBisnis() {
     );
 }
 
-export default PinjamanBisnis;
+export default CashManagement;

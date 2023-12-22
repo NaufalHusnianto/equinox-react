@@ -58,18 +58,18 @@ function DebitCard() {
                     </Col>
                 </Row>
             </Container>
-            <Container fluid className="mt-5 mb-5 bg-light">
+            <Container fluid className="mt-5 mb-5 bg-dark">
                 <Row className="mt-2 mb-5">
-                    <h1 className="text-center fs-3 mt-3">Equinox Debit Spesial</h1>
+                    <h1 className="text-center text-light fs-3 mt-3">Equinox Debit Spesial</h1>
                 </Row>
                 <Row className="mt-5 mb-5 text-center">
                     <Col className="text-center">
                         <Image src="/image/equinox debit card/debit-black.png" style={{width: '300px'}} />
-                        <h1 className="fs-5">Black Card</h1>
+                        <h1 className="fs-5 text-light">Black Card</h1>
                     </Col>
                     <Col className="text-center">
                         <Image src="/image/equinox debit card/debit-white.png" style={{width: '300px'}} />
-                        <h1 className="fs-5">White Card</h1>
+                        <h1 className="fs-5 text-light">White Card</h1>
                     </Col>
                 </Row>
             </Container>

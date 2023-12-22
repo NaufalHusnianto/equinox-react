@@ -24,28 +24,28 @@ function SimpananBisnis() {
                 <Col md={6} className="mb-4">
                     <CustomCard
                     backgroundImage="/image/tabungan-rupiah.jpg"
-                    title="Tabungan Rupiah"
-                    description="Kemudahan Menabung Untuk Kenyamanan Hidup"
+                    title="Tabungan Bisnis"
+                    description="Hadirkan Sarana Pendukung perusahaan"
                     />
                 </Col>
                 <Col md={6} className="mb-4">
                     <CustomCard
                     backgroundImage="/image/tabungan-multicurrency.jpg"
-                    title="Tabungan Multicurrency"
-                    description="Kemudahan dan benefit transaksi dengan berbagai pilihan valuta asing"
+                    title="Deposito Rupiah"
+                    description="Kemudahan dan benefit transaksi rupiah"
                     />
                 </Col>
                 <Col md={6} className="mb-4">
                     <CustomCard
                     backgroundImage="/image/tabungan-rencana.jpg"
-                    title="Tabungan Rencana"
+                    title="Giro Rupiah"
                     description="Wujudkan rencana hidup di masa depan dengan pengelolaan terencana"
                     />
                 </Col>
                 <Col md={6} className="mb-4">
                     <CustomCard
                     backgroundImage="/image/tabungan-valas.jpg"
-                    title="Tabungan Valas"
+                    title="Giro Valas"
                     description="Keuntungan lebih untuk simpanan valuta asing"
                     />
                 </Col>

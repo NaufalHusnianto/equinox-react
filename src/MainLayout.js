@@ -13,6 +13,8 @@ function MainLayout({ children }) {
       backgroundImage = '';
     } else if (location.pathname === '/produk/corporate-card') {
       backgroundImage = '';
+    } else if (location.pathname === '/tentang-equinox') {
+      backgroundImage = '';
     }
   
     const containerStyle = {

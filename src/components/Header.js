@@ -57,16 +57,11 @@ function Header() {
                             <NavDropdown.Divider />
                             <NavDropdown.Item as={Link} to="/produk/corporate-card" style={{ color: 'black' }}>Corporate Card</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Cash Management</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Trade</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>International Banking</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/bisnis/cash-management" style={{ color: 'black' }}>Cash Management</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/bisnis/trade-finance" style={{ color: 'black' }}>Trade</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/bisnis/international-banking" style={{ color: 'black' }}>International Banking</NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title={ <span className="text-white">About Equinox</span> } id="nav-dropdown" style={{ marginLeft: '5px' }}>
-                            <NavDropdown.Item as={Link} to="/service1" style={{ color: 'black' }}>Corporate Info</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service2" style={{ color: 'black' }}>Equinox Group</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Sustainability</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/service3" style={{ color: 'black' }}>Investor Relation</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link as={Link} to="/tentang-equinox" className="text-white" style={{ marginLeft: '5px' }}>Tentang Equinox</Nav.Link>
                         <Nav.Link as={Link} to="/bantuan" className="text-white" style={{ marginLeft: '5px' }}>Bantuan</Nav.Link>
                         <Nav.Link onClick={openGoogleMaps} style={{ color: 'white', marginLeft: '1px', marginRight: '10px', cursor: 'pointer' }}>
                                 <AiOutlineEnvironment/> Location

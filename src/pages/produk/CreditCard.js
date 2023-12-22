@@ -18,6 +18,34 @@ function CreditCard() {
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
+                <Carousel.Item className="w-100">
+                    <Image
+                        className="d-block w-100"
+                        src="/image/tertiary-bg.jpg"
+                        alt="ORI"
+                        style={{ maxHeight: '300px', objectFit: 'cover', filter: 'brightness(30%)' }}
+                    />
+                    <Carousel.Caption className="d-flex flex-column justify-content-center align-items-center" >
+                        <h1 className="text-center">Kartu Kredit Equinox</h1>
+                        <p className="text-center">
+                            Miliki Kartu Kredit Equinox dan dapatkan kemudahan, kenyamanan serta keamanan dalam bertransaksi di dalam maupun luar negeri dan bertransaksi online.
+                        </p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item className="w-100">
+                    <Image
+                        className="d-block w-100"
+                        src="/image/secondary-bg.jpg"
+                        alt="ORI"
+                        style={{ maxHeight: '300px', objectFit: 'cover', filter: 'brightness(30%)' }}
+                    />
+                    <Carousel.Caption className="d-flex flex-column justify-content-center align-items-center" >
+                        <h1 className="text-center">Kartu Kredit Equinox</h1>
+                        <p className="text-center">
+                            Miliki Kartu Kredit Equinox dan dapatkan kemudahan, kenyamanan serta keamanan dalam bertransaksi di dalam maupun luar negeri dan bertransaksi online.
+                        </p>
+                    </Carousel.Caption>
+                </Carousel.Item>
             </Carousel>
             <Container fluid className="text-white mt-5 mb-5">
             </Container>

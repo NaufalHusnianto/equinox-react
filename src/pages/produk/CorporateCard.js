@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, Nav, Navbar } from "react-bootstrap";
+import { Container, Row, Col, Image, Nav, Navbar, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import CustomCard from "../../components/CustomCard";
 
@@ -75,45 +75,66 @@ function CorporateCard() {
                             <Row className="mb-4 mt-5">
                                 <Col md={4} className="mb-4">
                                     <CustomCard
-                                    backgroundImage="/image/graphic/1.png"
-                                    title="Expense Management"
+                                    backgroundImage="/image/graphic/6.png"
+                                    title="Corporate Identity"
                                     description="Sebagai alat kontrol untuk memisahkan transaksi bisnis dengan transaksi pribadi, Equinox Corporate Card menyediakan kemudahan bagi Perusahaan untuk mengontrol pengeluaran pegawai."
                                     />
                                 </Col>
                                 <Col md={4} className="mb-4">
                                     <CustomCard
-                                    backgroundImage="/image/graphic/2.png"
-                                    title="Dual Billing Statement"
+                                    backgroundImage="/image/graphic/5.png"
+                                    title="Cost Saving"
                                     description="Tersedia lembar tagihan untuk pemegang kartu maupun PIC Perusahaan untuk memudahkan kontrol dan pengawasan penggunaan"
                                     />
                                 </Col>
                                 <Col md={4} className="mb-4">
                                     <CustomCard
-                                    backgroundImage="/image/graphic/3.png"
-                                    title="Cashflow Management"
+                                    backgroundImage="/image/graphic/4.png"
+                                    title="Flexibility"
                                     description="Dengan grace period 20 s/d 50 hari, Perusahaan dapat lebih leluasa mengatur cash flow."
                                     />
                                 </Col>
                                 <Col md={4} className="mb-4">
                                     <CustomCard
-                                    backgroundImage="/image/graphic/4.png"
-                                    title="Payments"
+                                    backgroundImage="/image/graphic/3.png"
+                                    title="Helpdesk Corporate Card"
                                     description="Kemudahan pembayaran tagihan menggunakan Equinox Cash Management yang dapat diakses langsung dari kantor."
                                     />
                                 </Col>
-                                <Col md={4} className="mb-4">
-                                    <CustomCard
-                                    backgroundImage="/image/graphic/5.png"
-                                    title="Power Bills"
-                                    description="Kemudahan melakukan berbagai jenis pembayaran rutin bulanan dalam satu tagihan saja di Equinox Corporate Card Anda. Daftar sekarang."
-                                    />
+                            </Row>
+                        </div>
+                    </Container>
+                );
+            case 'Persyaratan':
+                return (
+                    <Container className="w-100 d-flex flex-column align-items-center bg-dark mb-5" >
+                        <div className="w-100 ms-5 me-5 mt-5">
+                            <h1 className="text-center" style={{ color: 'palevioletred' }}>Persyaratan</h1>
+                        </div>
+                        <div>
+                            <Row className="mb-4 mt-5">
+                                <h1 className="fs-5 text-center">Kelengkapan Dokumen</h1>
+                            </Row>
+                            <Row className="w-100"> 
+                                <Col md={6}>
+                                    <h1 className="fs-5 text-center">Perusahaan</h1>
+                                    <ul>
+                                        <li>Perjanjian Kerjasama</li>
+                                        <li>Surat Rekomendasi Penerbitan</li>
+                                        <li>Anggaran Dasar</li>
+                                        <li>Akta Perusahaan</li>
+                                        <li>NPWP Perusahaan</li>
+                                        <li>Identitas Pejabat yang Bertanggung Jawab</li>
+                                    </ul>
                                 </Col>
-                                <Col md={4} className="mb-4">
-                                    <CustomCard
-                                    backgroundImage="/image/graphic/6.png"
-                                    title="Visa Spends Clarity"
-                                    description="Monitoring penggunaan kartu oleh PIC perusahaan."
-                                    />
+                                <Col md={6}>
+                                    <h1 className="fs-5 text-center">Karyawan/Pegawai</h1>
+                                    <ul>
+                                        <li>Fotocopy KTP (WNI)</li>
+                                        <li>Aplikasi Equinox Corporate Card</li>
+                                        <li>Fotocopy Paspor (WNA)</li>
+                                        <li>NPWP</li>
+                                    </ul>
                                 </Col>
                             </Row>
                         </div>
@@ -160,7 +181,6 @@ function CorporateCard() {
                                 <Nav.Link onClick={() => handleNavClick('SpecialBenefit')} className="text-white">Special Benefit</Nav.Link>
                                 <Nav.Link onClick={() => handleNavClick('MoreFeatures')} className="text-white">More Features</Nav.Link>
                                 <Nav.Link onClick={() => handleNavClick('Persyaratan')} className="text-white">Persyaratan</Nav.Link>
-                                <Nav.Link onClick={() => handleNavClick('BiayaBunga')} className="text-white">Biaya & Bunga</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -168,10 +188,9 @@ function CorporateCard() {
                 {renderContent()}
             </Container>
 
-            <Container fluid className="text-white mt-5 mb-5">
+            <Container fluid className="text-white mb-5">
                 <Row className="mt-5 mb-5">
-                    <h1 className="text-center">Produk Pilihan</h1>
-                    <h1 className="text-center fs-4 mt-3">Equinox Credit Card</h1>
+                    <h1 className="text-center fs-4 mt-3" style={{color: 'palevioletred'}}>You May Also Like</h1>
                 </Row>
                 <Row className="mt-5">
                     <Col className="text-center" xs={12} md={4}>
@@ -185,6 +204,11 @@ function CorporateCard() {
                     <Col className="text-center" xs={12} md={4}>
                         <Image src="/image/equinox debit card/debit-silver.png" style={{width: '300px'}} />
                         <h1 className="fs-5">Silver</h1>
+                    </Col>
+                </Row>
+                <Row className="text-center mt-3 mb-3">
+                    <Col>
+                    <Button style={{backgroundColor: 'palevioletred', border: 'none'}} className="text-white">Bandingkan</Button>
                     </Col>
                 </Row>
             </Container>
